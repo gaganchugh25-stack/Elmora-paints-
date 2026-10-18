@@ -1,0 +1,385 @@
+/* The user-supplied bright architectural reference governs this visual layer. */
+:root {
+  --paper: #fffdf8;
+  --ink: #071126;
+  --muted: #56606b;
+  --line: #dedfd9;
+  --sage: #087f86;
+  --gold: #ffb51b;
+}
+::selection {
+  background: #ffce66;
+  color: #071126;
+}
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+h2 {
+  font-size: clamp(32px, 3.4vw, 50px);
+}
+h3 {
+  font-size: 24px;
+}
+.site-header {
+  background: #fffaf0f5;
+  border-bottom: 0;
+}
+.header-inner {
+  padding-inline: 6.8vw;
+  gap: 24px;
+}
+.wordmark {
+  position: relative;
+  padding-top: 20px;
+  flex-shrink: 0;
+  color: #071126;
+}
+.wordmark > span {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  letter-spacing: -0.04em;
+}
+.wordmark small {
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: 5px;
+  margin-top: 8px;
+}
+.brand-petals {
+  position: absolute;
+  top: -3px;
+  width: 41px;
+  height: 26px;
+}
+.desktop-nav {
+  gap: clamp(17px, 2.3vw, 36px);
+  font-size: 14px;
+}
+.desktop-nav a {
+  padding-block: 12px;
+}
+.desktop-nav a:hover,
+.site-footer nav a:hover {
+  color: #087f86;
+  text-decoration-color: #ffb51b;
+  text-decoration-thickness: 3px;
+}
+.header-contact,
+.button {
+  border-radius: 999px;
+  font-weight: 800;
+}
+.header-contact {
+  background: #ffb51b;
+  padding: 15px 24px;
+  border: 0;
+  color: #071126;
+  white-space: nowrap;
+  gap: 20px;
+}
+.header-contact:hover,
+.button-light:hover {
+  background: #ffca52;
+}
+.hero {
+  height: calc(100svh - 94px);
+  min-height: min(680px, calc(100svh - 94px));
+  max-height: 1000px;
+  background: #efe3d1;
+  color: #071126;
+}
+.hero-image {
+  object-position: center center;
+}
+.hero-shade {
+  background:
+    linear-gradient(0deg, rgba(35, 24, 14, 0.78), transparent 33%),
+    linear-gradient(
+      90deg,
+      rgba(255, 253, 247, 0.73),
+      rgba(255, 253, 247, 0.42) 30%,
+      transparent 56%
+    );
+}
+.hero-content {
+  left: 7.1%;
+  top: 10%;
+  max-width: 590px;
+}
+.hero h1 {
+  font-size: clamp(52px, 5.1vw, 80px);
+  font-weight: 800;
+  line-height: 1.02;
+  text-wrap: initial;
+}
+.hero-happier {
+  color: #f26530;
+}
+.hero-lives {
+  color: #078e9b;
+}
+.hero-content .hero-eyebrow {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.hero-content .hero-description {
+  max-width: 455px;
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 19px 0 24px;
+}
+.button-light {
+  background: #ffb51b;
+  color: #071126;
+  padding: 15px 25px;
+  font-size: 14px;
+  gap: 23px;
+}
+.button-dark {
+  background: #071126;
+}
+.button-dark:hover {
+  background: #087f86;
+}
+.hero-benefits {
+  position: absolute;
+  bottom: 105px;
+  left: 10%;
+  right: 8%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  color: white;
+}
+.hero-benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero-benefit strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+}
+.hero-benefit small {
+  display: block;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: inset 0 0 0 5px #ffffff55;
+  background: #fff;
+  color: #e68b00;
+}
+.benefit-icon svg {
+  width: 27px;
+  height: 27px;
+}
+.hero-benefit:nth-child(3) .benefit-icon {
+  color: #078e9b;
+}
+.hero-foot {
+  bottom: 28px;
+  color: white;
+  font-size: 11px;
+}
+.hero-foot > a {
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  gap: 10px;
+}
+.walkthrough-controls {
+  top: 14px;
+  justify-content: flex-end;
+  color: #071126;
+}
+.walkthrough-controls > span {
+  display: none;
+}
+.walkthrough-controls button {
+  color: #071126;
+  background: #fff9e9e8;
+  border: 1px solid #e5d4af;
+  border-radius: 99px;
+  font-size: 10px;
+  min-height: 36px;
+}
+.walkthrough-controls button:hover {
+  background: #ffca52;
+}
+.walkthrough-hero[data-walkthrough="active"] .walkthrough-video {
+  transition: none;
+}
+.walkthrough-progress > span {
+  background: #ffb51b;
+}
+.collections-section {
+  background: #fff5e4;
+}
+.visualiser-section {
+  background: var(--paper);
+}
+.story-section {
+  background: var(--paper);
+}
+.site-footer {
+  background: #f6efe2;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: #087f86;
+}
+input,
+textarea {
+  caret-color: #087f86;
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .header-inner {
+    padding-inline: 4vw;
+    gap: 18px;
+  }
+  .desktop-nav {
+    gap: 15px;
+    font-size: 12px;
+  }
+  .header-contact {
+    padding: 13px 17px;
+    font-size: 11px;
+    gap: 10px;
+  }
+  .wordmark > span {
+    font-size: 34px;
+  }
+  .hero-benefits {
+    left: 5%;
+    right: 5%;
+    gap: 14px;
+  }
+  .hero-benefit {
+    gap: 10px;
+  }
+  .hero-benefit strong {
+    font-size: 12px;
+  }
+  .hero-benefit small {
+    font-size: 10px;
+  }
+  .benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 700px) {
+  .header-inner {
+    height: 78px;
+    padding-inline: 24px;
+  }
+  .wordmark > span {
+    font-size: 33px;
+  }
+  .brand-petals {
+    width: 32px;
+    height: 23px;
+  }
+  .wordmark small {
+    font-size: 8px;
+    margin-top: 6px;
+  }
+  .menu-toggle {
+    color: #071126;
+  }
+  .hero {
+    height: auto;
+    min-height: 790px;
+    max-height: none;
+  }
+  .hero-image {
+    object-position: 60% center;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 253, 247, 0.95),
+      rgba(255, 253, 247, 0.8) 36%,
+      rgba(255, 253, 247, 0) 65%,
+      rgba(35, 24, 14, 0.78)
+    );
+  }
+  .hero-content {
+    top: 38px;
+    left: 24px;
+    right: 24px;
+    max-width: none;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 10.8vw, 64px);
+    line-height: 1.06;
+  }
+  .hero-content .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    margin-bottom: 18px;
+  }
+  .hero-content .hero-description {
+    font-size: 14px;
+    max-width: 340px;
+    margin: 18px 0 22px;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .hero-benefits {
+    grid-template-columns: 1fr 1fr;
+    left: 24px;
+    right: 24px;
+    bottom: 83px;
+    gap: 20px 12px;
+  }
+  .hero-benefit {
+    gap: 9px;
+  }
+  .hero-benefit strong {
+    font-size: 11px;
+  }
+  .hero-benefit small {
+    font-size: 9px;
+  }
+  .benefit-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .benefit-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .hero-foot {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    justify-content: center;
+  }
+  .walkthrough-caption {
+    display: none;
+  }
+  .site-footer nav {
+    gap: 14px 22px;
+  }
+}

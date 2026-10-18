@@ -1,0 +1,29 @@
+node_modules/
+.next/
+test-results/
+playwright-report/
+preview/
+.impeccable/
+*.tsbuildinfo
+.DS_Store
+
+# Local instructions and private working documents
+AGENTS.md
+*.doc
+*.docx
+*.pdf
+*resume*
+*Resume*
+*résumé*
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*.log

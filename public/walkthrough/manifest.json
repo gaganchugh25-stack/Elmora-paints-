@@ -1,0 +1,17 @@
+{
+  "asset": "public/walkthrough/elmora-journey-sharp.mp4",
+  "sources": [
+    "scene-01.mp4",
+    "Scene-02.mp4",
+    "Scene-03.mp4",
+    "Scene-04.mp4",
+    "Scene-05.mp4",
+    "scene-06.mp4"
+  ],
+  "width": 1600,
+  "height": 900,
+  "framesPerSecond": 24,
+  "durationSeconds": 40,
+  "keyframeInterval": 3,
+  "bytes": 92942859
+}

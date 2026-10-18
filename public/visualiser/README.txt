@@ -1,0 +1,1 @@
+Generated from supplied photographs. Wall mattes use spatial bounds and photo-derived pixel selection to exclude artwork, furniture and plants. Rebuild with node scripts/build-visualiser.mjs. Displayed paint colours are illustrative, not calibrated product shades.
