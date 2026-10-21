@@ -21,7 +21,7 @@ export function WalkthroughHero() {
   useEffect(() => {
     if (disabled) return;
     const media = window.matchMedia(
-      "(min-width: 768px) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+      "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
     );
     const connection = (navigator as Navigator & { connection?: Connection })
       .connection;

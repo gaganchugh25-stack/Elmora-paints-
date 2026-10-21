@@ -945,7 +945,7 @@ textarea::placeholder {
   transform: scaleX(0);
   transform-origin: left;
 }
-@media (prefers-reduced-motion: reduce), (max-width: 767px), (pointer: coarse) {
+@media (prefers-reduced-motion: reduce), (max-width: 767px) {
   .walkthrough-video,
   .walkthrough-controls,
   .walkthrough-progress {
