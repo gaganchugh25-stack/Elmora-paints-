@@ -41,8 +41,24 @@ export function WalkthroughHero() {
       const deepLink =
         window.location.hash &&
         !["#home", "#main"].includes(window.location.hash);
+      const alignDeepLink = () => {
+        const target = document.getElementById(window.location.hash.slice(1));
+        if (!target) return;
+        requestAnimationFrame(() => {
+          const headerHeight =
+            Number.parseFloat(
+              getComputedStyle(document.documentElement).scrollPaddingTop,
+            ) ||
+            document.querySelector("header")?.getBoundingClientRect().height ||
+            0;
+          const top =
+            target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+        });
+      };
       if (!media.matches || constrained || outsideHero || deepLink) {
         setStatus("static");
+        if (deepLink) alignDeepLink();
         return;
       }
 
